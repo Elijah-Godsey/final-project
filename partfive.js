@@ -1,15 +1,13 @@
-// Fetch data from the Charity Navigator API and display it on the website
-document.addEventListener("DOMContentLoaded", () => {
-    const apiUrl = "https://api.charitynavigator.org/v2/Organizations"; // Replace with actual API endpoint
-    const apiKey = "your_api_key_here"; // Replace with your actual API key
 
+document.addEventListener("DOMContentLoaded", () => {
+    const apiUrl = "https://developer.charitynavigator.org/portal/private/dashboard"; 
+    const apiKey = "https://developer.charitynavigator.org/portal/private/dashboard"; 
     const charityContainer = document.querySelector("#charityContainer");
     const errorMessage = document.querySelector("#errorMessage");
 
-    // Function to fetch charity data
     async function fetchCharityData() {
         try {
-            const response = await fetch(`${apiUrl}?app_id=YOUR_APP_ID&app_key=${apiKey}`);
+            const response = await fetch(`${apiUrl}https://developer.charitynavigator.org/portal/private/dashboard${apiKey}`);
 
             if (!response.ok) {
                 throw new Error("Failed to fetch data from the API.");
